@@ -1,6 +1,6 @@
 import React from "react";
 
-function Primeiro() {
+const Primeiro = () => {
   const msg = "Seja bem vindo(a)";
 
   return (

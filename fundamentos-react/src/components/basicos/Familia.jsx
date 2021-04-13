@@ -1,10 +1,11 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React, { Children, cloneElement } from "react";
 
-export default (props) => {
+const Familia = (props) => {
   return (
     <div>
       {Children.map(props.children, (child) => cloneElement(child, props))}
     </div>
   );
 };
+
+export default Familia;

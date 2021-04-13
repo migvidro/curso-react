@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ComParametro(props) {
+const ComParametro = (props) => {
   const status = props.nota >= 7 ? "Aprovado" : "de Recuperação";
   const notaInt = Math.ceil(props.nota);
   return (
@@ -14,4 +14,6 @@ export default function ComParametro(props) {
       </p>
     </div>
   );
-}
+};
+
+export default ComParametro;

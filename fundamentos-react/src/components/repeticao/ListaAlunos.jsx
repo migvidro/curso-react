@@ -1,8 +1,7 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import alunos from "../../data/alunos";
 
-export default (props) => {
+const ListaAlunos = (props) => {
   return (
     <div>
       <ul style={{ listStyle: "none" }}>
@@ -17,3 +16,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default ListaAlunos;

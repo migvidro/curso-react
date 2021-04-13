@@ -2,9 +2,9 @@
 import React from "react";
 
 import produtos from "../../data/produtos";
-import './TabelaProdutos.css';
+import "./TabelaProdutos.css";
 
-export default (props) => {
+const TabelaProduto = (props) => {
   return (
     <div className="TabelaProdutos">
       <table border="1">
@@ -18,7 +18,7 @@ export default (props) => {
         <tbody>
           {produtos.map((produto, key) => {
             return (
-              <tr className={key % 2 === 0 ? 'Par' : 'Impar'} key={key}>
+              <tr className={key % 2 === 0 ? "Par" : "Impar"} key={key}>
                 <td>{produto.id}</td>
                 <td>{produto.nome}</td>
                 <td>R$ {produto.preco.toFixed(2).replace(".", ",")}</td>
@@ -30,3 +30,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default TabelaProduto;

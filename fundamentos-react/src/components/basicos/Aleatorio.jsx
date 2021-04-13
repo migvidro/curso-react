@@ -1,8 +1,6 @@
-/* eslint-disable import/no-anonymous-default-export */
-/* eslint-disable no-unused-vars */
 import React from "react";
 
-export default (props) => {
+const Aleatorio = (props) => {
   const max = Math.floor(props.max);
   const min = Math.ceil(props.min);
 
@@ -23,3 +21,5 @@ export default (props) => {
     </>
   );
 };
+
+export default Aleatorio;

@@ -1,5 +1,4 @@
-/* eslint-disable import/no-anonymous-default-export */
-export default [
+const alunos = [
   {
     id: 1,
     nome: "Ana",
@@ -46,3 +45,5 @@ export default [
     nota: 8.8,
   },
 ];
+
+export default alunos;

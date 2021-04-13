@@ -1,6 +1,7 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 
-export default (props) => {
+const FamiliaMembro = (props) => {
   return <div>{props.nome} <strong>{props.sobrenome}</strong></div>;
 };
+
+export default FamiliaMembro;

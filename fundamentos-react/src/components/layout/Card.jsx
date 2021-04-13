@@ -1,8 +1,7 @@
-/* eslint-disable import/no-anonymous-default-export */
 import "./Card.css";
 import React from "react";
 
-export default (props) => {
+const Card = (props) => {
   const cardStyle = {
     backgroundColor: props.color || "#CCC",
     borderColor: props.color || "#CCC",
@@ -15,3 +14,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default Card;
