@@ -1,17 +1,34 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 
-import './App.css'
-import Card from "./components/layout/Card.jsx";
-import Primeiro from "./components/basicos/Primeiro.jsx";
-import ComParametro from "./components/basicos/ComParametro.jsx";
-import Fragmento from "./components/basicos/Fragmento.jsx";
-import Aleatorio from "./components/basicos/Aleatorio.jsx";
+import "./App.css";
+import Card from "./components/layout/Card";
+import Primeiro from "./components/basicos/Primeiro";
+import ComParametro from "./components/basicos/ComParametro";
+import Fragmento from "./components/basicos/Fragmento";
+import Aleatorio from "./components/basicos/Aleatorio";
+import FamiliaMembro from "./components/basicos/FamiliaMembro";
+import Familia from "./components/basicos/Familia";
+import ListaAlunos from "./components/repeticao/ListaAlunos";
+import TabelaProduto from "./components/repeticao/TabelaProdutos";
 
 export default () => (
   <div className="App">
     <h1>Fundamentos React</h1>
     <div className="Cards">
+      <Card titulo="#07 - Desafio Produtos" color="#3A9AD9">
+        <TabelaProduto />
+      </Card>
+      <Card titulo="#06 - Repeticao" color="#FF4C65">
+        <ListaAlunos />
+      </Card>
+      <Card titulo="#05 - Componente com Filhos" color="#00C8F8">
+        <Familia sobrenome="Ferreira">
+          <FamiliaMembro nome="Pedro" />
+          <FamiliaMembro nome="Ana" />
+          <FamiliaMembro nome="Gustavo" />
+        </Familia>
+      </Card>
       <Card titulo="#04 - Desafio Aleatorio" color="#FA6900">
         <Aleatorio min={1} max={60} />
       </Card>
