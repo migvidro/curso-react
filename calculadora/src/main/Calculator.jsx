@@ -23,6 +23,27 @@ class Calculator extends Component {
     this.addDigit = this.addDigit.bind(this);
   }
 
+  doOperation(values, operation) {
+    let result = 0;
+    switch (operation) {
+      case "+":
+        result = values[0] + values[1];
+        break;
+      case "-":
+        result = values[0] - values[1];
+        break;
+      case "/":
+        result = values[0] / values[1];
+        break;
+      case "*":
+        result = values[0] * values[1];
+        break;
+      default:
+        result = 0;
+    }
+    return result;
+  }
+
   clearMemory() {
     this.setState({ ...initialState });
   }
@@ -36,12 +57,7 @@ class Calculator extends Component {
 
       const values = [...this.state.values];
 
-      try {
-        values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`);
-      } catch (e) {
-        values[0] = this.state.values[0];
-      }
-
+      values[0] = this.doOperation(values, currentOperation);
       values[1] = 0;
 
       this.setState({
@@ -74,7 +90,6 @@ class Calculator extends Component {
       values[i] = newValue;
 
       this.setState({ values });
-      console.log(values);
     }
   }
 
