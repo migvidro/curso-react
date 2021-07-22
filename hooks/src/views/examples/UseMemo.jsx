@@ -8,7 +8,7 @@ const UseMemo = (props) => {
   const [n3, setN3] = useState(0);
 
   const sum = (a, b) => {
-      const future = Date.now() + 2000;
+      const future = Date.now() + 500;
       while(Date.now() < future) {}
       return a + b;
   };
