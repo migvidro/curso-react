@@ -1,18 +1,16 @@
-const Jsx = () => {
-  const titulo = <h1>JSX e um conceito Central</h1>
+import Layout from '../components/Layout'
 
-  const subtitulo = () => {
-    return <h2>{"muito legal".toUpperCase()}</h2> 
-  }
+const Jsx = () => {
+  const titulo = <h1>JSX e um conceito Central</h1>;
+
+  const subtitulo = () => <h2>{"muito legal".toUpperCase()}</h2>;
 
   return (
-    <div>
+    <Layout titulo="Entendendo o JSX">
       {titulo}
       {subtitulo()}
-      <p>
-        {JSON.stringify({ nome: 'Miguel', idade: 20 })}
-      </p>
-    </div>
+      <p>{JSON.stringify({ nome: "Miguel", idade: 20 })}</p>
+    </Layout>
   );
 };
 
